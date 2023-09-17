@@ -85,21 +85,3 @@ variable "database_name" {
 }
 
 
-
-
-##### FOR ALB ######
-
-
-variable "application_load_balancer_name" {    
-  default = "strapi-stage-alb"
-}
-
-variable "aws_lb_target_group_name" {    
-  default = "strapi-stage-tg"
-}
-
-variable "acm_certificate_arn" {    
-  default = "arn:aws:acm:ap-south-1:782408168927:certificate/d9d4d66e-7a5d-4143-a331-d9fbf851c18b"
-}
-
-
