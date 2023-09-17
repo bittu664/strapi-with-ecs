@@ -8,6 +8,11 @@
 
 
 
+
+**IMPORTANT** All requirements are fulfilled, all the sensitive informations are coming form secrets manager, as per best practise ECS cluster is in the private subnets , RDS cluster is also in provate subnets , applications are accecible only from Loadbalancer which is assoitaed with my domain.
+
+
+
 **STEPS TO CREATE THIS WHOLE PROJECT**
 
 
@@ -102,3 +107,19 @@ So in here our vpc is created with best practises...
 
 
 **Step-9:** Then same things for stage folder but in  here difference is Aurora-db does not have Multi-AZ because this is the stage env, we dont want too much of cost.. and only 1 db-instance for writer & in ecs-cluster here i am using FARGATE_SPOT to save the cost.
+
+**Final-steps** binded the prod and staging ALB into route53 with custom domain. see this..
+
+![Screenshot](route53.png)
+
+
+**Here you can see the applications logs, monitoring, and alarams, so through terraform i created a sns topic too for sending alerts to my email**
+
+![Screenshot](monitor.png)
+
+![Screenshot](logs.png)
+
+![Screenshot](alarams.png)
+
+![Screenshot](sns.png)
+
