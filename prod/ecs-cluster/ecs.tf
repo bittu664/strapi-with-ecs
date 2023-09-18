@@ -103,7 +103,7 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
   
     {
             "name": "strapi",
-            "image": "782408168927.dkr.ecr.ap-south-1.amazonaws.com/strapi-prod:latest",
+            "image": "${var.starpi_ecr_image}",
             "cpu": 0,
             "portMappings": [
                 {
@@ -155,8 +155,8 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
                 "options": {
                     "awslogs-create-group": "true",
                     "awslogs-group": "${aws_cloudwatch_log_group.log-group.id}",
-                    "awslogs-region": "ap-south-1",
-                    "awslogs-stream-prefix": "strapi-ecs-prod"
+                    "awslogs-region": "${var.region}",
+                    "awslogs-stream-prefix": "${var.awslogs_stream_prefix}"
                 },
                 "secretOptions": []
             }

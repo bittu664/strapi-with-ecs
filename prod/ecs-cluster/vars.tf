@@ -116,10 +116,14 @@ variable "aws_ecs_service_desired_count" {
 
 
 
+variable "starpi_ecr_image" {    
+  default = "782408168927.dkr.ecr.ap-south-1.amazonaws.com/strapi-prod:latest"
+}
 
 
-
-
+variable "awslogs_stream_prefix" {    
+  default = "strapi-ecs-prod"
+}
 
 
 #### ECS Auto Scaling Part
