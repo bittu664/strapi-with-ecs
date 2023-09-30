@@ -12,7 +12,7 @@
 ![Screenshot](starpi-stage.png)
 
 
-**VERY-IMPORTANT-POINT** AS OF NOW I DELETED ALL OF THESE RESOURCES BECUASE IT IS COSTING ME MORE THAN 100$. AND IT IS RUNING MORE THAN 2 WEEKS
+**VERY-IMPORTANT-POINT** AS OF NOW I DELETED ALL OF THESE RESOURCES BECUASE IT IS COSTING ME MORE THAN 300$. AND IT IS RUNING MORE THAN 2 WEEKS
 
 **IMPORTANT** All requirements are fulfilled, all the sensitive informations are coming form secrets manager, as per best practise ECS cluster is in the private subnets , RDS cluster is also in provate subnets , applications are accecible only from Loadbalancer which is assoitaed with my domain.
 
